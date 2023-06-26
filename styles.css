@@ -104,6 +104,13 @@ input[type="radio"]{
   margin-bottom: 8px;
 }
 
+.controls-container{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0px auto;
+}
+
 /* modal */
 
 .meme-modal{
