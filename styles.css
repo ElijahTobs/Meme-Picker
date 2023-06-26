@@ -44,3 +44,27 @@ header{
 .pumpkin-img{
   width: 80px;
 }
+
+/* controls */
+
+.emotion-radios{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bcbcbc;
+  border-radius: 5px;
+}
+
+.radio{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bcbcbc;
+  padding: 4px 8px;
+}
+
+label{
+  font-size: 14px;
+  padding: 3px;
+  width: 100%;
+  cursor: pointer;
+}
+
