@@ -168,3 +168,30 @@ const catsData = [
       alt: "A cat looking sad",
   },
 ]
+
+// console.log(4*3)
+
+// function getEmetionsArray(arr){
+//   const emotionsArray = []
+//   for (let x=0; x<arr.length; x++){
+//     for (let y=0; y<arr[x].emotionTags.length; y++){
+//       emotionsArray.push(arr[x].emotionTags[y])
+//     }
+//   }
+//   console.log(emotionsArray)
+// }
+// getEmetionsArray(catsData)
+
+// ===================================
+// ===================================
+
+function getEmotionsArray(arr){
+  const emotionsArray = []
+  for (let cat of arr){
+    for (let emotion of cat.emotionTags){
+      console.log(emotion)
+    }
+  }
+  console.log(emotionsArray)
+}
+getEmetionsArray(catsData)
