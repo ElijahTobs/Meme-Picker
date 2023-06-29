@@ -30,7 +30,17 @@ function renderEmotionsRadios(cats){
   let htmlCode = ``
   const emotions = getEmotionsArray(cats)
   for (let emotion of emotions){
-    htmlCode += `<p>${emotion}</p>`
+    
+    htmlCode += `
+      <div class="radio">
+      <label for="${emotion}">${emotion}</label>
+      <input 
+        type="radio" 
+        id="${emotion}" 
+        value="${emotion}" 
+        name="choice-radio">
+      </div>
+    `
   }
   
   radioBtnCont.innerHTML = htmlCode
