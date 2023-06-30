@@ -18,8 +18,10 @@ function getEmotionsArray(arr){
   const emotionsArray = []
   for (let cat of arr){
     for (let emotion of cat.emotionTags){
-      emotionsArray.push(emotion)
-    }
+      if(!emotionsArray.includes(emotion)){
+        emotionsArray.push(emotion)
+      }
+    } 
   }
   return emotionsArray
 }
