@@ -84,17 +84,16 @@ function getMatchingCatsArray(){
         return cat.emotionTags.includes(selectedEmotion.value)
       }
 
-
     })
 
-
-    console.log(matchingCatsArray)
+    return matchingCatsArray
 
   }
+  // closeModal()
+}
 
-
-  
-  closeModal()
+function getSingleCatObject(){
+  const catsArray = getMatchingCatsArray()
 }
 
 function closeModal(){
