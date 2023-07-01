@@ -1,5 +1,10 @@
 import { catsData } from "./data.js"
 
+const gifsOnly = document.getElementById("gifs-only-option")
+const radioBtnCont = document.getElementById("emotion-radios")
+const memeModal = document.getElementById("meme-modal")
+const getImageBtn = document.getElementById("get-image-btn")
+
 // function getEmetionsArray(arr){
 //   const emotionsArray = []
 //   for (let x=0; x<arr.length; x++){
@@ -26,7 +31,6 @@ function getEmotionsArray(arr){
   return emotionsArray
 }
 
-const radioBtnCont = document.getElementById("emotion-radios")
 
 radioBtnCont.addEventListener("change", higlightCheckedOption)
 
@@ -64,13 +68,20 @@ function renderEmotionsRadios(cats){
 
 renderEmotionsRadios(catsData)
 
-const memeModal = document.getElementById("meme-modal")
-document.getElementById("get-image-btn").addEventListener("click", displayModal)
 
-function displayModal(){
-  memeModal.style.display = 'flex'
+getImageBtn.addEventListener("click", getMatchingCatsArray)
 
- 
+function getMatchingCatsArray(){
+  const isGif = gifsOnly.checked
+  
+
+
+  if (document.querySelector('input[type=radio]:checked')){
+    const selectedEmotion = document.querySelector("input[type=radio]:checked")
+  }
+
+  
+  
   closeModal()
 }
 
