@@ -28,6 +28,15 @@ function getEmotionsArray(arr){
 
 const radioBtnCont = document.getElementById("emotion-radios")
 
+radioBtnCont.addEventListener("change", higlightCheckedOption)
+
+
+function higlightCheckedOption(e) {
+  const targetID = document.getElementById(e.target.id)
+  targetID.classList.add("highlight")
+  
+}
+
 function renderEmotionsRadios(cats){
   let htmlCode = ``
   const emotions = getEmotionsArray(cats)
