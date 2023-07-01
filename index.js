@@ -32,9 +32,14 @@ radioBtnCont.addEventListener("change", higlightCheckedOption)
 
 
 function higlightCheckedOption(e) {
-  const targetID = document.getElementById(e.target.id)
-  targetID.classList.add("highlight")
   
+  const radios = document.getElementsByClassName('radio')
+  for (let radio of radios){
+    radio.classList.remove('highlight')
+  }
+  
+  const targetID = document.getElementById(e.target.id)
+  targetID.parentElement.classList.add("highlight")
 }
 
 function renderEmotionsRadios(cats){
@@ -44,8 +49,8 @@ function renderEmotionsRadios(cats){
     
     htmlCode += `
       <div class="radio">
-      <label for="${emotion}">${emotion}</label>
-      <input 
+        <label for="${emotion}">${emotion}</label>
+        <input 
         type="radio" 
         id="${emotion}" 
         value="${emotion}" 
