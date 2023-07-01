@@ -37,7 +37,7 @@ function higlightCheckedOption(e) {
   for (let radio of radios){
     radio.classList.remove('highlight')
   }
-  
+
   const targetID = document.getElementById(e.target.id)
   targetID.parentElement.classList.add("highlight")
 }
@@ -64,5 +64,19 @@ function renderEmotionsRadios(cats){
 
 renderEmotionsRadios(catsData)
 
+const memeModal = document.getElementById("meme-modal")
+document.getElementById("get-image-btn").addEventListener("click", displayModal)
 
+function displayModal(){
+  memeModal.style.display = 'flex'
 
+ 
+  closeModal()
+}
+
+function closeModal(){
+  document.getElementById("meme-modal-close-btn").addEventListener("click", function() {
+    memeModal.style.display = 'none'
+    
+  })
+}
