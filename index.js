@@ -69,7 +69,7 @@ function renderEmotionsRadios(cats){
 renderEmotionsRadios(catsData)
 
 
-getImageBtn.addEventListener("click", getMatchingCatsArray)
+getImageBtn.addEventListener("click", getSingleCatObject)
 
 function getMatchingCatsArray(){
   if (document.querySelector('input[type=radio]:checked')){
@@ -94,7 +94,17 @@ function getMatchingCatsArray(){
 
 function getSingleCatObject(){
   const catsArray = getMatchingCatsArray()
+  if (catsArray.length === 1){
+    // return catsArray[0]
+    console.log(catsArray[0])
+  } else {
+    const randNum = Math.floor(Math.random() * catsArray.length)
+    // return catsArray[randNum]
+    console.log(catsArray, randNum, catsArray[randNum])
+  }
 }
+
+
 
 function closeModal(){
   document.getElementById("meme-modal-close-btn").addEventListener("click", function() {
