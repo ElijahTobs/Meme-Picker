@@ -7,19 +7,10 @@ const memeModalInner = document.getElementById("meme-modal-inner")
 const getImageBtn = document.getElementById("get-image-btn")
 const memeModalCloseBtn = document.getElementById("meme-modal-close-btn")
 
-// function getEmetionsArray(arr){
-//   const emotionsArray = []
-//   for (let x=0; x<arr.length; x++){
-//     for (let y=0; y<arr[x].emotionTags.length; y++){
-//       emotionsArray.push(arr[x].emotionTags[y])
-//     }
-//   }
-//   console.log(emotionsArray)
-// }
-// getEmetionsArray(catsData)
 
-// ===================================
-// ===================================
+// =====================================================
+// =================== EVENT LISTENERS =================
+// =====================================================
 
 radioBtnCont.addEventListener("change", higlightCheckedOption)
 
@@ -28,6 +19,9 @@ memeModalCloseBtn.addEventListener("click", closeModal)
 getImageBtn.addEventListener("click", renderCat)
 
 
+// =====================================================
+// ====================== FUNCTIONS ====================
+// =====================================================
 
 function higlightCheckedOption(e) {
   
