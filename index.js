@@ -5,6 +5,7 @@ const radioBtnCont = document.getElementById("emotion-radios")
 const memeModal = document.getElementById("meme-modal")
 const memeModalInner = document.getElementById("meme-modal-inner")
 const getImageBtn = document.getElementById("get-image-btn")
+const memeModalCloseBtn = document.getElementById("meme-modal-close-btn")
 
 // function getEmetionsArray(arr){
 //   const emotionsArray = []
@@ -20,6 +21,14 @@ const getImageBtn = document.getElementById("get-image-btn")
 // ===================================
 // ===================================
 
+radioBtnCont.addEventListener("change", higlightCheckedOption)
+
+getImageBtn.addEventListener("click", renderCat)
+
+memeModalCloseBtn.addEventListener("click", closeModal)
+
+
+
 function getEmotionsArray(arr){
   const emotionsArray = []
   for (let cat of arr){
@@ -33,7 +42,6 @@ function getEmotionsArray(arr){
 }
 
 
-radioBtnCont.addEventListener("change", higlightCheckedOption)
 
 
 function higlightCheckedOption(e) {
@@ -70,7 +78,7 @@ function renderEmotionsRadios(cats){
 renderEmotionsRadios(catsData)
 
 
-getImageBtn.addEventListener("click", renderCat)
+
 
 function getMatchingCatsArray(){
   if (document.querySelector('input[type=radio]:checked')){
@@ -90,18 +98,15 @@ function getMatchingCatsArray(){
     return matchingCatsArray
 
   }
-  // closeModal()
 }
 
 function getSingleCatObject(){
   const catsArray = getMatchingCatsArray()
   if (catsArray.length === 1){
     return catsArray[0]
-    console.log(catsArray[0])
   } else {
     const randNum = Math.floor(Math.random() * catsArray.length)
     return catsArray[randNum]
-    console.log(catsArray, randNum, catsArray[randNum])
   }
 }
 
@@ -114,13 +119,11 @@ function renderCat(){
     alt="${catObject.alt}">
   `
   memeModal.style.display = 'flex'
-  // console.log(catObject)
 }
 
 
+function closeModal() {
+  memeModal.style.display = 'none' 
+}
 
-
-  document.getElementById("meme-modal-close-btn").addEventListener("click", function() {
-    memeModal.style.display = 'none'
-    
-  })
+  
