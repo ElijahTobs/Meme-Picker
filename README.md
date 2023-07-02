@@ -52,7 +52,7 @@ And For tracking linter errors in JavaScript file, run:
 
 ## Live Demo
 
-See the live by clicking [Live Demo Link](https://elijah-cookie-consent.vercel.app/)
+See the live by clicking [Live Demo Link](https://elijah-meme-picker.vercel.app/)
 
 ## Author
 
