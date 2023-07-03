@@ -1,4 +1,4 @@
-import { catsData } from "./data.js"
+import { catsData } from "/js/data.js"
 
 const gifsOnly = document.getElementById("gifs-only-option")
 const radioBtnCont = document.getElementById("emotion-radios")
