@@ -4,7 +4,6 @@
 
 # Meme Picker
 
-
 ## Screenshot / Description
 
 ![image](images/mobile.gif)
