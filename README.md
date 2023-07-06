@@ -11,7 +11,6 @@
 > A meme picker website that allows you select from a pool of emotions and returns the corresponding meme.
 There's also a checkbox  with which you can decide to see results for memes with gifs only
 
-
 >> This is part of the [**Scrimba Front-End Career Path**](https://scrimba.com/learn/frontend) projects
 
 ## Built With
